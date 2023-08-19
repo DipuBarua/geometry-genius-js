@@ -65,11 +65,13 @@ function setElementInnerText(elementId, area) {
 // 3.parallelogram
 function calculateparallelogramArea() {
     const base = getInputValue('parallelogram-base');
-
     const height = getInputValue('parallelogram-height');
 
+    if (isNaN(base) || isNaN(height)) {
+        alert('please enter the number value');
+        return;
+    }
     const areaCalculation = base * height;
-
     setElementInnerText('parallelogramArea', areaCalculation)
 }
 
@@ -77,7 +79,20 @@ function calculateparallelogramArea() {
 function calculateRhombusArea() {
     const base = getInputValue('rhombus-base');
     const height = getInputValue('rhombus-height');
-    const areaCalculation = base * height;
 
+    if (isNaN(base) || isNaN(height)) {
+        alert('please enter the number value');
+        return;
+    }
+
+    const areaCalculation = base * height;
     setElementInnerText('rhombusArea', areaCalculation);
 }
+
+
+/**
+ * validation way:
+ * >> set the proper type of input field. ex: text, number, email, password
+ * >> or, check type using typeof 
+ * >> or, isNaN(); [Nan: not a number]
+ */
