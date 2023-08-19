@@ -72,3 +72,12 @@ function calculateparallelogramArea() {
 
     setElementInnerText('parallelogramArea', areaCalculation)
 }
+
+// 4.rhombus
+function calculateRhombusArea() {
+    const base = getInputValue('rhombus-base');
+    const height = getInputValue('rhombus-height');
+    const areaCalculation = base * height;
+
+    setElementInnerText('rhombusArea', areaCalculation);
+}
