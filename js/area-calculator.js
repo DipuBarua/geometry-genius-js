@@ -60,6 +60,21 @@ function setElementInnerText(elementId, area) {
     element.innerText = area;
 }
 
+// c) add to Calculation-Entry
+function addToCalculationEntry(areaType, area) {
+    const calculationEntry = document.getElementById('calculation-entry');
+
+    const count = calculationEntry.childElementCount;
+
+    const p = document.createElement('p');
+    p.classList.add('my-2');
+
+    p.innerHTML = `${count + 1}. ${areaType} ${area} cm <sup>2</sup> <button class="btn btn-sm btn-success">convert to m<sup>2</sup></button>`;
+
+    calculationEntry.appendChild(p);
+
+}
+
 
 
 // 3.parallelogram
@@ -73,6 +88,9 @@ function calculateparallelogramArea() {
     }
     const areaCalculation = base * height;
     setElementInnerText('parallelogramArea', areaCalculation)
+
+    //add area to Calculation-Entry
+    addToCalculationEntry('parallelogram', areaCalculation);
 }
 
 // 4.rhombus
@@ -87,6 +105,8 @@ function calculateRhombusArea() {
 
     const areaCalculation = base * height;
     setElementInnerText('rhombusArea', areaCalculation);
+
+    addToCalculationEntry('Rhombus', areaCalculation);
 }
 
 
