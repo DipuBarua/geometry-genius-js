@@ -1,3 +1,4 @@
+// 1.triangle 
 function calculateTriangleArea() {
     //get triangle base
     const baseField = document.getElementById('triangle-base');
@@ -17,7 +18,7 @@ function calculateTriangleArea() {
     areaField.innerText = areaCalculation;
 }
 
-
+// 2.rectangle 
 function calculateRectangleArea() {
     //get rectangle width
     const widthField = document.getElementById('rectangle-width');
@@ -30,9 +31,44 @@ function calculateRectangleArea() {
     const length = parseFloat(lengthFieldString);
 
     // rectangle area calculation
-    const rectangelAreaCalculation = width * length;
+    const areaCalculation = width * length;
 
     // set rectangle area 
     const areaField = document.getElementById('rectangleArea');
-    areaField.innerText = rectangelAreaCalculation;
+    areaField.innerText = areaCalculation;
+}
+
+
+
+
+
+
+// ///////////////////////////////////////////////////////////////////////////////
+
+// Reuseable Function --->> reduce duplicate code******
+
+// a) reuseable get input value in number 
+function getInputValue(fieldId) {
+    const inputField = document.getElementById(fieldId);
+    const inputValueString = inputField.value;
+    const inputValue = parseFloat(inputValueString);
+    return inputValue;
+}
+// b) reuseable set area value.
+function setElementInnerText(elementId, area) {
+    const element = document.getElementById(elementId);
+    element.innerText = area;
+}
+
+
+
+// 3.parallelogram
+function calculateparallelogramArea() {
+    const base = getInputValue('parallelogram-base');
+
+    const height = getInputValue('parallelogram-height');
+
+    const areaCalculation = base * height;
+
+    setElementInnerText('parallelogramArea', areaCalculation)
 }

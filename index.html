@@ -60,6 +60,8 @@
                             <input id="rectangle-length" type="text" class="border text-xl w-24 px-2 ml-3 bg-gray-200" placeholder="length">
                             <span class="ml-2">cm</span>
                         </p>
+
+
                         <p>Area: <span id="rectangleArea" class="text-2xl font-bold">  00</span><span> cm<sup>2</sup></span>
                         </p>
                         <div class="card-actions w-full">
@@ -71,22 +73,24 @@
                 <!-- third card  -->
                 <div class="card bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
-                        <img src="images/triangle.png" alt="triangle" class="rounded-xl" />
+                        <img src="images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Triangle</h2>
-                        <p>Area(A) = 0.5*b*h</p>
+                        <h2 class="card-title">parallelogram</h2>
+                        <p>Area(A) = b*h</p>
                         <p>
-                            <input id="triangle-base" type="text" class="border text-xl w-24 px-2 ml-3 bg-gray-200" placeholder="base">
+                            <input id="parallelogram-base" type="text" class="border text-xl w-24 px-2 ml-3 bg-gray-200" placeholder="base">
                             <span class="ml-2">cm</span>
 
-                            <input id="triangle-height" type="text" class="border text-xl w-24 px-2 ml-3 bg-gray-200" placeholder="height">
+                            <input id="parallelogram-height" type="text" class="border text-xl w-24 px-2 ml-3 bg-gray-200" placeholder="height">
                             <span class="ml-2">cm</span>
                         </p>
-                        <p>Area: <span id="area" class="text-2xl font-bold">  00</span><span> cm<sup>2</sup></span>
+
+
+                        <p>Area: <span id="parallelogramArea" class="text-2xl font-bold">  00</span><span> cm<sup>2</sup></span>
                         </p>
                         <div class="card-actions w-full">
-                            <button onclick="calculateArea()" class="btn btn-primary w-full">Calculate</button>
+                            <button onclick="calculateparallelogramArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
